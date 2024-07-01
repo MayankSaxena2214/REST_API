@@ -35,6 +35,9 @@ let posts=[
 app.listen(3000,()=>{
     console.log("App is listening on the port ");
 });
+app.get("/",(req,res)=>{
+    res.redirect("/posts");
+})
 app.get("/register",(req,res)=>{
     res.send("Registre route")
 })

@@ -1,0 +1,36 @@
+h1{
+    color:darkred;
+    font-size:50px;
+}
+.heading{
+    display:flex;
+    justify-content:space-between
+
+}
+.post{
+    background-color: azure;
+    width:250px;
+}
+.post .username{
+    font-weight:bold;
+}
+.post .edit{
+    border-radius:20px;
+    padding:2px 2px;
+    width:50px;
+    background-color: bisque;
+}
+.post .delete{
+    border-radius:20px;
+    padding:2px 2px;
+    width:50px;
+    background-color: red;
+}
+.post .like{
+    margin-top:4px;
+    margin-left:28px;
+    border-radius:20px;
+    padding:2px 2px;
+    width:50px;
+    background-color: rgb(7, 229, 22);
+}

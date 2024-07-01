@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>FLOOD POST</h1>
+       <a style="margin-top:45px; font-size:40px;" href="http://localhost:3000/posts/new"><button>NEW POST</button></a>
+    </div>
+    
+
+    <% for(post of posts){ %>
+        <div class="post">
+            <h3 class="user">@ <%= post.username %></h3>
+            <p class="content"><%= post.content %></p>
+            <a href="http://localhost:3000/posts/<%= post.id %>/edit"><button class="edit">Edit</button>&nbsp; &nbsp;</a>
+            <br>
+            <br>
+            <form method="POST" action="/posts/<%= post.id %>?_method=DELETE">
+                <button >DElete</button>
+            </form>
+            
+            <br>
+            <button class="like">Like</button>
+            <br>
+            <br>
+            <a href="http://localhost:3000/posts/<%= post.id %>"><button>See in detail</button></a>
+        </div>
+    <% } %>
+
+   
+</body>
+</html>
